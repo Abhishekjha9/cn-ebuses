@@ -62,9 +62,7 @@ function update(){
 var userName = document.getElementById("name").value
 var desc = document.getElementById("Description").value
 
-var cardDesc = document.getElementById("desc")
-var cardName = document.getElementById("cardname")
-
+var hideText = document.getElementById("wrapper-text")
 
 
 if(selectedCategory == "thanks" || selectedCategory == "new-feature"){
@@ -87,5 +85,7 @@ if(selectedCategory == "thanks" || selectedCategory == "new-feature"){
   newDiv.attributeStyleMap
 
   document.getElementById('issues').appendChild(newDiv);
+
+  hideText.style.display="none"
 }
 }
