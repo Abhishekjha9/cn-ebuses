@@ -32,6 +32,29 @@ list.scrollLeft = btn.id ==="left" ? -firstCardWidth: firstCardWidth;
 })
 });
 
+function handleRating(event) {
+  const selectedStar = event.target;
+  if (selectedStar.classList.contains('star')) {
+    const ratingValue = selectedStar.getAttribute('data-value');
+    resetStars();
+    highlightStars(ratingValue);
+  }
+}
+
+function resetStars() {
+  const stars = document.querySelectorAll('.star');
+  stars.forEach(star => star.classList.remove('checked'));
+}
+
+function highlightStars(value) {
+  const stars = document.querySelectorAll('.star');
+  stars.forEach(star => {
+    if (star.getAttribute('data-value') <= value) {
+      star.classList.add('checked');
+    }
+  });
+}
+
 let searchItems = document.getElementById("search-items")
 
 function update(){
@@ -49,10 +72,6 @@ if(selectedCategory == "thanks" || selectedCategory == "new-feature"){
   newDiv.classList.add('card');
   newDiv.style.height = '300px';
   // newDiv.style.width = '300px';
-  var existingCardWidth = document.querySelector('.list .card').clientWidth;
-  // Set the width of the new div to match the existing cards
-  newDiv.style.width = existingCardWidth + 'px';
-
   var image = document.createElement('img');
   image.src = '666201.png';
 
@@ -68,8 +87,5 @@ if(selectedCategory == "thanks" || selectedCategory == "new-feature"){
   newDiv.attributeStyleMap
 
   document.getElementById('issues').appendChild(newDiv);
-
-  cardDesc.innerText = desc
-  cardName.innerText = userName
 }
 }
