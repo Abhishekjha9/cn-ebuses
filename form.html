@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Form</title>
+    <style>
+        body{
+            background-color: #B4D4FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        label{
+            margin: 5px;
+            color: rgb(0, 0, 0);
+            font-family: ubuntu;
+            font-size: large;
+        }
+        input{
+            margin: 10px;
+            width: 300px;
+        }
+        #main{
+            margin-top: 10%;
+                height: 400px;
+                width: 40%;
+            /* text-align: center; */
+            background: rgba( 255, 255, 255, 0.6 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 9.5px );
+-webkit-backdrop-filter: blur( 9.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+         display: flex;
+         align-items: center;
+         justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <form action="">
+            <label for="">Enter Name:</label> <br>
+            <input type="text"> <br>
+             <label for="">Enter your email</label> <br>
+             <input type="email" name="" id=""> <br>
+             <input type="submit" value="Submit" onclick="alertFunc()">
+
+        </form>
+    
+    </div>
+    <script>
+        function alertFunc(){
+            alert("Your form has been submitted, we have got the information, you will get the information on your email.")
+        }
+    </script>
+</body>
+</html>
